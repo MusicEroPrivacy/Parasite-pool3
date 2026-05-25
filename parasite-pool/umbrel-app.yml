@@ -1,0 +1,19 @@
+id: parasite-pool
+name: Parasite Pool Gateway
+version: 0.1.0
+tagline: A Datum-style gateway for Parasite Pool
+description: >
+  A clean all-in-one Stratum proxy that lets your miners connect locally
+  while forwarding work upstream to Parasite Pool (parasite.wtf:42069).
+  This behaves like a Datum Gateway but aligned with Parasite philosophy.
+
+developer: Karma
+website: https://parasite.space
+repo: https://github.com/Karma/parasite-pool
+support: https://github.com/Karma/parasite-pool/issues
+
+port: 8080
+icon: icon.png
+category: mining
+path: ""
+defaultPassword: ""

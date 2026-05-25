@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  gateway:
+    build: ./services/gateway
+    container_name: parasite-gateway
+    restart: unless-stopped
+    environment:
+      UPSTREAM_HOST: parasite.wtf
+      UPSTREAM_PORT: 42069
+      LISTEN_PORT: 3333
+      DASHBOARD_PORT: 8080
+      LIBRE_RPC_HOST: 192.168.50.103
+      LIBRE_RPC_PORT: 8442
+      LIBRE_RPC_USER: umbrel
+      LIBRE_RPC_PASS: m4dTOS5_11fL4YY84kFDgUyBW-p1WzSXjD8wXd5a_Iw=
+    ports:
+      - "3333:3333"    # miners connect here
+      - "8080:8080"    # dashboard later
+    networks:
+      - parasite-net
+
+networks:
+  parasite-net:
+    driver: bridge
